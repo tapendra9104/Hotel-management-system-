@@ -13,28 +13,34 @@
   <img src="https://img.shields.io/badge/Auth-JWT-7c3aed?style=for-the-badge" alt="JWT badge">
 </p>
 
+## Live Product Snapshot
+
+![GrandStay demo overview](screenshots/demo-overview.gif)
+
 ## Overview
 
-GrandStay is designed as a polished hospitality platform with separate guest and admin experiences. Guests can register, sign in, browse rooms, reserve stays, book spa services, and place dining orders. Hotel staff can sign into a dedicated admin portal to monitor bookings, food orders, and spa appointments from one operations dashboard.
+GrandStay is designed as a polished hospitality platform with clearly separated guest and admin experiences. Guests can register, sign in, browse rooms, reserve stays, book spa services, and place dining orders. Hotel staff can sign into a dedicated admin portal to monitor bookings, food orders, and spa appointments from a focused operations dashboard.
 
 The project is structured as a professional full-stack application with:
 
-- a dedicated `frontend/` for the guest website and login portals
+- a dedicated `frontend/` for the public website and auth portals
 - a TypeScript `backend/` API for business logic and persistence
 - SQLite for local development storage
 - separate guest and admin authentication flows
 - Windows launch scripts for simple local startup
 
-## Highlights
+## Core Features
 
-- Dedicated guest member portal with `Login` and `Register` tabs
-- Separate admin login page with a professional operations dashboard
-- Room booking flow with availability lookup
-- Spa service catalog and appointment scheduling
-- Dining menu and food order flow
-- Contact, reviews, and payment-related backend endpoints
-- JWT-based authentication for guest and admin roles
-- Hospitality-style UI inspired by real hotel website patterns
+| Area | What It Includes |
+|---|---|
+| Guest Portal | Dedicated `/login` page with `Login` and `Register` tabs |
+| Admin Portal | Separate `/admin` route with booking, dining, and spa oversight |
+| Rooms | Availability lookup, reservation creation, pricing and room selection |
+| Spa | Service browsing, appointment scheduling, and admin-side visibility |
+| Dining | Menu browsing, food ordering, and admin order management |
+| Auth | JWT-based guest and admin authentication |
+| Backend | TypeScript + Express API with SQLite persistence |
+| UX | Hospitality-inspired, professional portal design |
 
 ## Screenshots
 
@@ -45,6 +51,22 @@ The project is structured as a professional full-stack application with:
 | Admin Portal |
 |---|
 | ![Admin portal desktop](screenshots/admin-page.png) |
+
+## Architecture
+
+```mermaid
+flowchart LR
+    User["Guest User"] -->|"Uses"| Login["Guest Login Portal"]
+    User -->|"Browses"| Site["Public Hotel Website"]
+    Staff["Admin User"] -->|"Uses"| Admin["Admin Portal"]
+
+    Login -->|"Auth requests"| API["Express + TypeScript API"]
+    Site -->|"Bookings / spa / dining"| API
+    Admin -->|"Operational dashboard"| API
+
+    API -->|"Reads / writes"| DB["SQLite Database"]
+    API -->|"Serves static frontend"| Frontend["Frontend Assets"]
+```
 
 ## User Experience
 
@@ -69,7 +91,7 @@ The project is structured as a professional full-stack application with:
 | Database | SQLite |
 | Authentication | JWT |
 | Runtime | `tsx` |
-| Testing / Verification | smoke test script in `tools/run-final-test.js` |
+| Testing / Verification | `tools/run-final-test.js` |
 
 ## Quick Start
 
@@ -105,6 +127,24 @@ For local development, the backend seeds a default admin account:
 - Password: `Admin@12345`
 
 These values can be changed in your backend environment configuration.
+
+## Environment Variables
+
+The main local environment file lives in `backend/.env`. A template is available in `backend/.env.example`.
+
+| Variable | Purpose | Default |
+|---|---|---|
+| `PORT` | API and frontend serving port | `5001` |
+| `NODE_ENV` | Runtime mode | `development` |
+| `API_VERSION` | API version string | `3.0.0` |
+| `SQLITE_DATABASE_PATH` | SQLite database file path | `backend/storage/grandstay.sqlite` |
+| `JWT_SECRET` | JWT signing secret | local development placeholder |
+| `JWT_EXPIRES_IN` | JWT expiry duration | `7d` |
+| `CORS_ORIGIN` | Allowed frontend origin | `http://localhost:5001` |
+| `FRONTEND_URL` | Frontend URL reference | `http://localhost:5001` |
+| `ADMIN_NAME` | Seeded admin display name | `GrandStay Admin` |
+| `ADMIN_EMAIL` | Seeded admin login email | `admin@grandstayhotel.com` |
+| `ADMIN_PASSWORD` | Seeded admin password | `Admin@12345` |
 
 ## Verification
 
@@ -148,6 +188,27 @@ node tools/run-final-test.js
 - reviews
 - payment flows
 
+## Deployment
+
+GrandStay is simple to deploy because the backend serves the frontend assets directly. In production, you only need to host the Node.js backend process and point it at the right environment variables.
+
+### Production deployment checklist
+
+1. Provision a server or Node-compatible hosting environment.
+2. Copy the project files and install dependencies.
+3. Create `backend/.env` with production values.
+4. Set a strong `JWT_SECRET`.
+5. Point `SQLITE_DATABASE_PATH` to your persistent storage location.
+6. Start the backend with `npm run start`.
+7. Expose the application on your desired domain or reverse proxy.
+
+### Example production start
+
+```powershell
+npm run backend:install
+npm run start
+```
+
 ## Project Structure
 
 ```text
@@ -167,19 +228,29 @@ backend/
   src/routes/          API route modules
   src/types/           Shared domain types
   src/utils/           Helpers and utilities
-  data/                Static seed/catalog data
+  data/                Static seed and catalog data
   storage/             Local SQLite database
 
 scripts/windows/       Windows startup helpers
 tools/                 Smoke test scripts
-screenshots/           README assets
+screenshots/           README visual assets
 ```
 
-## Notes
+## Contributing
 
-- SQLite is used for local persistence and development simplicity
-- `backend/storage/` and `backend/.env` are intentionally ignored from git
-- The project keeps the guest experience and admin operations flow clearly separated
+Contributions are welcome. If you want to improve the UI, add features, or strengthen the backend:
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Make your changes.
+4. Run the verification commands.
+5. Open a pull request with a clear summary.
+
+You can also read the contribution notes in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License
+
+This project is released under the MIT License. See [LICENSE](LICENSE) for details.
 
 ## GitHub About Text
 
