@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Fitness Center</title>
+  <desc id="desc">Placeholder image for the bright fitness center with treadmills.</desc>
+  <rect width="1600" height="900" fill="#ecf1f5"/>
+  <rect x="120" y="120" width="300" height="470" fill="#dcebf7"/>
+  <rect x="470" y="120" width="300" height="470" fill="#dcebf7"/>
+  <rect x="820" y="120" width="300" height="470" fill="#dcebf7"/>
+  <rect x="1170" y="120" width="300" height="470" fill="#dcebf7"/>
+  <rect x="0" y="620" width="1600" height="280" fill="#d3dce3"/>
+  <path d="M180 650h170l-20-70h-110z" fill="#39434b"/>
+  <path d="M410 650h170l-20-70h-110z" fill="#39434b"/>
+  <path d="M870 650h170l-20-70h-110z" fill="#39434b"/>
+  <path d="M1120 650h170l-20-70h-110z" fill="#39434b"/>
+  <circle cx="720" cy="690" r="52" fill="#6f808d"/>
+  <circle cx="720" cy="690" r="18" fill="#dfe7ed"/>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Fine Dining Restaurant</title>
+  <desc id="desc">Placeholder image for the chandelier-lit fine-dining room.</desc>
+  <rect width="1600" height="900" fill="#4b2b22"/>
+  <rect x="0" y="620" width="1600" height="280" fill="#2f1d18"/>
+  <circle cx="430" cy="170" r="70" fill="#dcae4d"/>
+  <circle cx="805" cy="135" r="90" fill="#dcae4d"/>
+  <circle cx="1185" cy="170" r="70" fill="#dcae4d"/>
+  <circle cx="430" cy="250" r="18" fill="#ffe8af"/>
+  <circle cx="805" cy="245" r="18" fill="#ffe8af"/>
+  <circle cx="1185" cy="250" r="18" fill="#ffe8af"/>
+  <rect x="210" y="500" width="320" height="90" rx="18" fill="#f6f0e6"/>
+  <rect x="640" y="470" width="320" height="90" rx="18" fill="#f6f0e6"/>
+  <rect x="1070" y="500" width="320" height="90" rx="18" fill="#f6f0e6"/>
+</svg>

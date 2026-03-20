@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Suite Living Room</title>
+  <desc id="desc">Placeholder image for the suite living room with chandelier.</desc>
+  <defs>
+    <linearGradient id="suiteSky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#cfe4f7"/>
+      <stop offset="100%" stop-color="#eef6fc"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="#e8dccd"/>
+  <rect x="980" y="120" width="420" height="420" fill="url(#suiteSky)"/>
+  <rect x="0" y="590" width="1600" height="310" fill="#d2b489"/>
+  <circle cx="780" cy="180" r="60" fill="#d4a03f"/>
+  <circle cx="735" cy="235" r="16" fill="#ffe7aa"/>
+  <circle cx="780" cy="250" r="18" fill="#ffe7aa"/>
+  <circle cx="825" cy="235" r="16" fill="#ffe7aa"/>
+  <rect x="250" y="520" width="420" height="120" rx="26" fill="#b78c62"/>
+  <rect x="320" y="480" width="280" height="70" rx="20" fill="#f7f2eb"/>
+  <rect x="760" y="560" width="220" height="70" rx="18" fill="#815a3d"/>
+  <rect x="1030" y="540" width="290" height="140" rx="28" fill="#f7f1e9"/>
+</svg>

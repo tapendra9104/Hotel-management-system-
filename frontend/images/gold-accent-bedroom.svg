@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Gold Accent Bedroom</title>
+  <desc id="desc">Placeholder image for the ornate gold-accent room gallery image.</desc>
+  <rect width="1600" height="900" fill="#54403b"/>
+  <rect x="0" y="610" width="1600" height="290" fill="#322621"/>
+  <rect x="410" y="150" width="780" height="330" fill="#8c6437"/>
+  <rect x="490" y="180" width="620" height="270" fill="#d9b05f"/>
+  <rect x="520" y="340" width="560" height="240" rx="28" fill="#f6f2ea"/>
+  <rect x="560" y="372" width="225" height="88" rx="14" fill="#ffffff"/>
+  <rect x="815" y="372" width="225" height="88" rx="14" fill="#ffffff"/>
+  <rect x="640" y="290" width="320" height="42" fill="#7e5330"/>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Hotel Exterior at Sunset</title>
+  <desc id="desc">Placeholder image for the palm-lined hotel exterior at sunset.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f7d38d"/>
+      <stop offset="55%" stop-color="#f2a35d"/>
+      <stop offset="100%" stop-color="#62332a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <rect y="580" width="1600" height="320" fill="#1b232a"/>
+  <rect x="520" y="210" width="560" height="350" rx="10" fill="#f3e1c3"/>
+  <rect x="650" y="350" width="300" height="210" fill="#2f1d16"/>
+  <rect x="725" y="230" width="150" height="120" fill="#f8e7b9"/>
+  <rect x="470" y="560" width="660" height="18" fill="#f8d28f"/>
+  <rect x="350" y="618" width="900" height="155" fill="#162933"/>
+  <path d="M320 620c50-100 58-180 20-260" stroke="#3b2a1e" stroke-width="18" fill="none"/>
+  <path d="M1280 620c-50-100-58-180-20-260" stroke="#3b2a1e" stroke-width="18" fill="none"/>
+  <circle cx="300" cy="300" r="48" fill="#2b5938"/>
+  <circle cx="350" cy="360" r="58" fill="#2b5938"/>
+  <circle cx="1300" cy="300" r="48" fill="#2b5938"/>
+  <circle cx="1250" cy="360" r="58" fill="#2b5938"/>
+</svg>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrandStay Member Access</title>
+    <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/auth-portal.css">
+</head>
+<body class="portal-page portal-page-member">
+    <div class="portal-shell">
+        <header class="portal-topbar">
+            <a href="/" class="portal-brand" aria-label="Return to GrandStay homepage">
+                <span class="portal-brand-mark">GS</span>
+                <span class="portal-brand-copy">
+                    <strong>GrandStay</strong>
+                    <small>Member Access</small>
+                </span>
+            </a>
+
+            <div class="portal-topbar-actions">
+                <span class="portal-pill">Guest reservation login</span>
+                <a href="/admin" class="portal-mode-link">Admin Login</a>
+            </div>
+        </header>
+
+        <main class="portal-stage">
+            <aside class="portal-visual">
+                <div class="portal-visual-media">
+                    <img src="/images/hero-hotel.jpg" alt="GrandStay exterior framed by palms at sunset" loading="eager">
+                </div>
+                <div class="portal-visual-overlay"></div>
+
+                <div class="portal-visual-copy">
+                    <p class="portal-eyebrow">Guest Access</p>
+                    <h1>Stay connected to every GrandStay experience.</h1>
+                    <p class="portal-lead">Sign in to move faster through booking, keep your stay details in one place, and return to spa and dining experiences with a single member profile.</p>
+
+                    <div class="portal-feature-grid">
+                        <article class="portal-feature-card">
+                            <span>Booking</span>
+                            <strong>Faster reservations</strong>
+                            <p>Use your member account to move from room selection to confirmation with less friction.</p>
+                        </article>
+
+                        <article class="portal-feature-card">
+                            <span>Dining</span>
+                            <strong>Room-service continuity</strong>
+                            <p>Keep dining preferences and return to signature dishes without starting over each time.</p>
+                        </article>
+
+                        <article class="portal-feature-card">
+                            <span>Wellness</span>
+                            <strong>Spa planning</strong>
+                            <p>Book wellness experiences with a profile that already knows how you like to stay.</p>
+                        </article>
+
+                        <article class="portal-feature-card">
+                            <span>Hospitality</span>
+                            <strong>Luxury with clarity</strong>
+                            <p>A dedicated access page keeps the guest journey polished, focused, and easy to trust.</p>
+                        </article>
+                    </div>
+
+                    <div class="portal-quote">
+                        GrandStay members get a cleaner booking journey, a consistent guest identity, and a more professional way to return for future stays.
+                    </div>
+                </div>
+            </aside>
+
+            <section class="portal-card" aria-labelledby="memberAccessHeading">
+                <div class="portal-card-head">
+                    <p class="portal-eyebrow">Welcome Back</p>
+                    <h2 id="memberAccessHeading">Member login and registration</h2>
+                    <p>Inspired by the clean hospitality login flow you shared, this page gives guests a dedicated place to sign in or create an account without mixing it into the main website.</p>
+                </div>
+
+                <div class="portal-tabs" role="tablist" aria-label="Member access tabs">
+                    <button type="button" class="portal-tab is-active" id="authTabLogin" data-auth-tab="login" role="tab" aria-selected="true" aria-controls="authPanelLogin">Login</button>
+                    <button type="button" class="portal-tab" id="authTabRegister" data-auth-tab="register" role="tab" aria-selected="false" aria-controls="authPanelRegister">Register</button>
+                </div>
+
+                <section class="portal-panel" id="authPanelLogin" role="tabpanel" aria-labelledby="authTabLogin">
+                    <form class="portal-form" id="memberLoginForm" novalidate>
+                        <label class="portal-field">
+                            <span>Email address</span>
+                            <input type="email" id="memberLoginEmail" name="memberLoginEmail" autocomplete="username" placeholder="you@grandstayguest.com" required>
+                        </label>
+
+                        <label class="portal-field">
+                            <span>Password</span>
+                            <input type="password" id="memberLoginPassword" name="memberLoginPassword" autocomplete="current-password" placeholder="Enter your password" required>
+                        </label>
+
+                        <div class="portal-actions">
+                            <label class="portal-check">
+                                <input type="checkbox" id="memberRemember" name="memberRemember">
+                                <span>Remember me on this device</span>
+                            </label>
+                            <a href="/admin" class="portal-muted-link">Administrator?</a>
+                        </div>
+
+                        <div class="portal-status" id="memberLoginStatus" aria-live="polite"></div>
+
+                        <button type="submit" class="btn btn-primary portal-primary-button" id="memberLoginButton">Sign In</button>
+                    </form>
+                </section>
+
+                <section class="portal-panel" id="authPanelRegister" role="tabpanel" aria-labelledby="authTabRegister" hidden>
+                    <form class="portal-form" id="memberRegisterForm" novalidate>
+                        <div class="portal-field-grid">
+                            <label class="portal-field">
+                                <span>Full name</span>
+                                <input type="text" id="memberRegisterName" name="memberRegisterName" autocomplete="name" placeholder="Guest full name" required>
+                            </label>
+
+                            <label class="portal-field">
+                                <span>Phone number</span>
+                                <input type="tel" id="memberRegisterPhone" name="memberRegisterPhone" autocomplete="tel" placeholder="+91 98765 43210">
+                            </label>
+                        </div>
+
+                        <label class="portal-field">
+                            <span>Email address</span>
+                            <input type="email" id="memberRegisterEmail" name="memberRegisterEmail" autocomplete="email" placeholder="you@grandstayguest.com" required>
+                        </label>
+
+                        <label class="portal-field">
+                            <span>Password</span>
+                            <input type="password" id="memberRegisterPassword" name="memberRegisterPassword" autocomplete="new-password" placeholder="Create a strong password" required>
+                        </label>
+
+                        <p class="portal-form-copy">Create a guest profile once, then use it for rooms, dining requests, spa services, and future reviews.</p>
+
+                        <div class="portal-status" id="memberRegisterStatus" aria-live="polite"></div>
+
+                        <button type="submit" class="btn btn-primary portal-primary-button" id="memberRegisterButton">Create Account</button>
+                    </form>
+                </section>
+
+                <section class="portal-session-card" id="memberSessionCard" hidden>
+                    <p class="portal-eyebrow">Session Active</p>
+                    <h3 id="memberSessionName">GrandStay Member</h3>
+                    <p id="memberSessionEmail">member@grandstay.com</p>
+                    <p id="memberSessionCopy">Your guest session is active. Continue to the website to book rooms, dining, and spa experiences with your signed-in account.</p>
+
+                    <div class="portal-session-actions">
+                        <a href="/" class="btn btn-primary">Continue to Website</a>
+                        <a href="/#rooms" class="btn btn-outline">Explore Rooms</a>
+                        <button type="button" class="btn btn-tertiary" id="memberLogoutButton">Sign Out</button>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+
+    <script src="/scripts/site-auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Grand Lobby with Chandelier</title>
+  <desc id="desc">Placeholder image for the lobby with chandelier and seating.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f8efe3"/>
+      <stop offset="100%" stop-color="#d8c0a0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="0" y="610" width="1600" height="290" fill="#efe4d5"/>
+  <rect x="180" y="150" width="220" height="420" fill="#f6f1ea" opacity="0.8"/>
+  <rect x="1200" y="150" width="220" height="420" fill="#f6f1ea" opacity="0.8"/>
+  <rect x="610" y="120" width="380" height="410" fill="#ead9c2"/>
+  <circle cx="800" cy="180" r="42" fill="#d5a94d"/>
+  <circle cx="760" cy="225" r="16" fill="#fce8b8"/>
+  <circle cx="800" cy="240" r="18" fill="#fce8b8"/>
+  <circle cx="840" cy="225" r="16" fill="#fce8b8"/>
+  <rect x="350" y="640" width="250" height="90" rx="18" fill="#b98d60"/>
+  <rect x="1000" y="640" width="250" height="90" rx="18" fill="#b98d60"/>
+  <rect x="700" y="660" width="200" height="60" rx="20" fill="#7f6249"/>
+</svg>

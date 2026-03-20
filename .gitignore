@@ -1,0 +1,9 @@
+node_modules/
+backend/node_modules/
+backend/logs/
+backend/storage/
+backend/.env
+output/
+.playwright-cli/
+npm-debug.log*
+yarn-error.log*

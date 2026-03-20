@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Double Height Lobby</title>
+  <desc id="desc">Placeholder image for the tall chandelier lobby.</desc>
+  <rect width="1600" height="900" fill="#d8c6b0"/>
+  <rect x="0" y="640" width="1600" height="260" fill="#efe7dc"/>
+  <rect x="170" y="110" width="180" height="500" fill="#6e4f38"/>
+  <rect x="1250" y="110" width="180" height="500" fill="#6e4f38"/>
+  <rect x="530" y="90" width="540" height="520" fill="#a07953"/>
+  <circle cx="800" cy="160" r="88" fill="#ddab4f"/>
+  <circle cx="800" cy="275" r="34" fill="#ffe7ac"/>
+  <rect x="300" y="640" width="200" height="70" rx="18" fill="#a48a6e"/>
+  <rect x="1100" y="640" width="200" height="70" rx="18" fill="#a48a6e"/>
+  <rect x="700" y="620" width="200" height="110" rx="20" fill="#77553d"/>
+</svg>

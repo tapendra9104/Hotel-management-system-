@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrandStay - Luxury Hotel Experience</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">GrandStay</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#facilities">Facilities</a></li>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="/admin">Admin</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="/login" class="nav-signin-link">Sign In</a>
+                <button type="button" class="book-btn" data-scroll-target="rooms">Book Now</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-media">
+            <img
+                src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                data-image-key="hero"
+                alt="Palm-lined GrandStay hotel exterior at sunset"
+                loading="eager"
+                fetchpriority="high"
+            >
+        </div>
+        <div class="hero-backdrop"></div>
+
+        <div class="container hero-shell">
+            <div class="hero-content">
+                <p class="hero-kicker">Welcome To</p>
+                <h1 class="hero-title">
+                    <span class="hero-title-main">Grand</span><span class="hero-title-accent">Stay</span>
+                </h1>
+                <p class="hero-subtitle">Where timeless elegance meets modern luxury. Experience the finest hospitality with world-class amenities, exquisite dining, and unparalleled comfort.</p>
+                
+                <div class="booking-form-container">
+                    <form class="booking-form" id="heroBookingForm">
+                        <div class="form-group">
+                            <div class="form-control">
+                                <span class="form-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" focusable="false">
+                                        <path d="M8 3v3"></path>
+                                        <path d="M16 3v3"></path>
+                                        <path d="M4 9h16"></path>
+                                        <rect x="4" y="5" width="16" height="15" rx="2"></rect>
+                                    </svg>
+                                </span>
+                                <div class="form-copy">
+                                    <label for="checkin">Check-in</label>
+                                    <button type="button" class="field-display date-display" data-date-trigger="checkin">Select date</button>
+                                    <input type="date" id="checkin" name="checkin" class="native-date-input" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="form-control">
+                                <span class="form-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" focusable="false">
+                                        <path d="M8 3v3"></path>
+                                        <path d="M16 3v3"></path>
+                                        <path d="M4 9h16"></path>
+                                        <rect x="4" y="5" width="16" height="15" rx="2"></rect>
+                                    </svg>
+                                </span>
+                                <div class="form-copy">
+                                    <label for="checkout">Check-out</label>
+                                    <button type="button" class="field-display date-display" data-date-trigger="checkout">Select date</button>
+                                    <input type="date" id="checkout" name="checkout" class="native-date-input" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="form-control">
+                                <span class="form-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" focusable="false">
+                                        <path d="M16 20v-1a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v1"></path>
+                                        <circle cx="10" cy="7" r="3"></circle>
+                                        <path d="M22 20v-1a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 4.13a3 3 0 0 1 0 5.74"></path>
+                                    </svg>
+                                </span>
+                                <div class="form-copy">
+                                    <label for="guests">Guests</label>
+                                    <select id="guests" name="guests" required>
+                                        <option value="1">1 Guest</option>
+                                        <option value="2" selected>2 Guests</option>
+                                        <option value="3">3 Guests</option>
+                                        <option value="4">4 Guests</option>
+                                        <option value="5">5+ Guests</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary search-btn">
+                            <span class="search-btn-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" focusable="false">
+                                    <circle cx="11" cy="11" r="7"></circle>
+                                    <path d="M20 20l-3.5-3.5"></path>
+                                </svg>
+                            </span>
+                            <span>Search Rooms</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <button type="button" class="hero-scroll-indicator" data-scroll-target="about" aria-label="Scroll to about section">
+                <span class="hero-scroll-wheel"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Our Story</h2>
+            <h3 class="section-subtitle">A Legacy of Luxury</h3>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Nestled in the heart of the city, GrandStay has been the epitome of luxury hospitality for over two decades. Our commitment to excellence, attention to every detail, and passion for creating unforgettable experiences has made us a landmark destination for discerning travelers from around the world.</p>
+                    
+                    <p>With 9 meticulously designed rooms ranging from cozy standard accommodations to opulent suites, a world-class spa, award-winning restaurant, and a team dedicated to your every need &mdash; GrandStay isn't just a hotel, it's an experience.</p>
+                    
+                    <p>Every corner of our property reflects our dedication to elegance and comfort. From our grand marble lobby to our serene garden spaces, from our state-of-the-art fitness facilities to our rejuvenating spa, GrandStay is designed to exceed your expectations at every turn.</p>
+                </div>
+                
+                <div class="about-image">
+                    <img
+                        src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        data-image-key="about"
+                        alt="GrandStay lobby with chandelier and lounge seating"
+                        loading="lazy"
+                    >
+                </div>
+            </div>
+
+            <!-- Hotel Highlights -->
+            <div class="hotel-highlights">
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M4 18h16l-1.5-9-4.5 4-2-6-2 6-4.5-4L4 18z"></path>
+                            <path d="M6 20h12"></path>
+                        </svg>
+                    </div>
+                    <h4>Premium Accommodations</h4>
+                    <p>Choose from Standard, Deluxe, or Presidential Suites, each offering unique comforts and stunning views of the city</p>
+                </div>
+                
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M7 3v8"></path>
+                            <path d="M5 3v5"></path>
+                            <path d="M9 3v5"></path>
+                            <path d="M5 8h4"></path>
+                            <path d="M7 11v10"></path>
+                            <path d="M16 3c1.7 2.1 2.3 4.6 2 7.5-.2 2.1-.9 3.8-2 5V21"></path>
+                        </svg>
+                    </div>
+                    <h4>Fine Dining</h4>
+                    <p>Award-winning restaurant featuring international cuisine, gourmet preparations, and an extensive wine selection by expert chefs</p>
+                </div>
+                
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M12 21c-3.5-2.1-5.5-4.7-5.5-7.7 0-2.5 1.8-4.5 4.1-4.5 1.1 0 2.1.4 2.9 1.2.8-.8 1.8-1.2 2.9-1.2 2.3 0 4.1 2 4.1 4.5 0 3-2 5.6-5.5 7.7z"></path>
+                            <path d="M12 9.5V4"></path>
+                            <path d="M9 6.5c0-1.2 1-2.2 2.2-2.2"></path>
+                        </svg>
+                    </div>
+                    <h4>Spa & Wellness</h4>
+                    <p>Full-service spa offering therapeutic massages, facials, and wellness treatments in a serene atmosphere</p>
+                </div>
+                
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M3 15c1.4 1.3 2.9 2 4.5 2s3.1-.7 4.5-2c1.4 1.3 2.9 2 4.5 2s3.1-.7 4.5-2"></path>
+                            <path d="M3 19c1.4 1.3 2.9 2 4.5 2s3.1-.7 4.5-2c1.4 1.3 2.9 2 4.5 2s3.1-.7 4.5-2"></path>
+                            <path d="M12 4c2.5 2.7 3.7 4.9 3.7 6.5A3.7 3.7 0 0 1 12 14.2a3.7 3.7 0 0 1-3.7-3.7C8.3 8.9 9.5 6.7 12 4z"></path>
+                        </svg>
+                    </div>
+                    <h4>Infinity Pool</h4>
+                    <p>Stunning rooftop infinity pool with panoramic city views, perfect for relaxation and recreation</p>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h4>20+</h4>
+                    <p>Years of Excellence</p>
+                </div>
+                <div class="stat-card">
+                    <h4>50K+</h4>
+                    <p>Happy Guests</p>
+                </div>
+                <div class="stat-card">
+                    <h4>4.9&#9733;</h4>
+                    <p>Average Rating</p>
+                </div>
+                <div class="stat-card">
+                    <h4>24/7</h4>
+                    <p>Concierge Service</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h3 class="section-subtitle">What We Offer</h3>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M2 8.5a16 16 0 0 1 20 0"></path>
+                        <path d="M5 12a11 11 0 0 1 14 0"></path>
+                        <path d="M8.5 15.5a6 6 0 0 1 7 0"></path>
+                        <circle cx="12" cy="19" r="1.2"></circle>
+                    </svg>
+                    <h4>Free Wi-Fi</h4>
+                </div>
+                <div class="feature-card">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M5 16l1.5-5h11L19 16"></path>
+                        <path d="M4 16h16v3H4z"></path>
+                        <circle cx="7" cy="19" r="1.5"></circle>
+                        <circle cx="17" cy="19" r="1.5"></circle>
+                        <path d="M8 11l1-3h6l1 3"></path>
+                    </svg>
+                    <h4>Valet Parking</h4>
+                </div>
+                <div class="feature-card">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M12 3l7 3v5c0 4.5-2.8 7.8-7 10-4.2-2.2-7-5.5-7-10V6l7-3z"></path>
+                        <path d="M9.5 12l1.8 1.8L15 10"></path>
+                    </svg>
+                    <h4>24/7 Security</h4>
+                </div>
+                <div class="feature-card">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M6 16h12"></path>
+                        <path d="M8 16V11a4 4 0 1 1 8 0v5"></path>
+                        <path d="M10 18a2 2 0 0 0 4 0"></path>
+                    </svg>
+                    <h4>Room Service</h4>
+                </div>
+                <div class="feature-card">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M12 21c-3.5-2.1-5.5-4.7-5.5-7.7 0-2.5 1.8-4.5 4.1-4.5 1.1 0 2.1.4 2.9 1.2.8-.8 1.8-1.2 2.9-1.2 2.3 0 4.1 2 4.1 4.5 0 3-2 5.6-5.5 7.7z"></path>
+                        <path d="M12 9.5V4"></path>
+                        <path d="M9 6.5c0-1.2 1-2.2 2.2-2.2"></path>
+                    </svg>
+                    <h4>Spa Access</h4>
+                </div>
+                <div class="feature-card">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M3 10v4"></path>
+                        <path d="M6 8v8"></path>
+                        <path d="M18 8v8"></path>
+                        <path d="M21 10v4"></path>
+                        <path d="M6 12h12"></path>
+                    </svg>
+                    <h4>Gym Access</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="facilities">
+        <div class="container">
+            <h2 class="section-title">Accommodations</h2>
+            <h3 class="section-subtitle">World-Class Facilities</h3>
+            
+            <div class="facilities-grid">
+                <div class="facility-card">
+                    <img
+                        src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        data-image-key="facilities.pool"
+                        alt="Infinity pool overlooking the water at sunset"
+                        loading="lazy"
+                    >
+                    <h4>Infinity Pool</h4>
+                    <p>Panoramic views from our rooftop infinity pool</p>
+                </div>
+                <div class="facility-card">
+                    <img
+                        src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        data-image-key="facilities.dining"
+                        alt="Fine-dining restaurant with chandeliers and dressed tables"
+                        loading="lazy"
+                    >
+                    <h4>Fine Dining</h4>
+                    <p>Award-winning multi-cuisine restaurant</p>
+                </div>
+                <div class="facility-card">
+                    <img
+                        src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        data-image-key="facilities.spa"
+                        alt="Candlelit spa treatment room with massage bed and hot stones"
+                        loading="lazy"
+                    >
+                    <h4>Spa & Wellness</h4>
+                    <p>Rejuvenating treatments by expert therapists</p>
+                </div>
+                <div class="facility-card">
+                    <img
+                        src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        data-image-key="facilities.gym"
+                        alt="Bright fitness center with treadmills and floor-to-ceiling windows"
+                        loading="lazy"
+                    >
+                    <h4>Fitness Center</h4>
+                    <p>State-of-the-art equipment, open 24/7</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="spa-services" class="spa-services">
+        <div class="container">
+            <div class="experience-header">
+                <div>
+                    <h3 class="section-subtitle">Wellness</h3>
+                    <h2 class="section-title">Spa Experiences Ready to Book</h2>
+                    <p class="experience-description">Reserve massages, facials, and wellness rituals with live appointment availability and flexible therapist preferences.</p>
+                </div>
+                <div class="experience-actions">
+                    <button type="button" class="btn btn-outline" id="refreshSpaAvailabilityButton">Refresh Appointments</button>
+                </div>
+            </div>
+
+            <div class="experience-meta">
+                <span class="experience-chip">Open daily 10:00 AM - 9:00 PM</span>
+                <span class="experience-chip" id="spaAvailabilitySummary">Checking next available appointments...</span>
+            </div>
+
+            <div class="experience-showcase">
+                <img
+                    src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                    data-image-key="facilities.spa"
+                    alt="Candlelit spa treatment room with massage bed and warm wellness ambiance"
+                    loading="lazy"
+                >
+                <div class="experience-showcase-copy">
+                    <p class="inventory-eyebrow">Spa Atmosphere</p>
+                    <h4>Serene treatment rooms designed for calm, privacy, and deep restoration</h4>
+                    <p>Every appointment is delivered in a warm candlelit setting with expert therapists, premium oils, and a quiet luxury finish that matches the rest of the GrandStay experience.</p>
+                </div>
+            </div>
+
+            <div class="spa-grid" id="spaServicesGrid"></div>
+            <div class="section-feedback" id="spaSectionStatus" aria-live="polite"></div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="rooms">
+        <div class="container">
+            <h3 class="section-subtitle">Accommodations</h3>
+            <h2 class="section-title">Elegant Rooms & Suites</h2>
+            
+            <div class="inventory-toolbar">
+                <div>
+                    <p class="inventory-eyebrow">Live Availability</p>
+                    <h4 id="roomsSearchSummary">Checking current inventory for your upcoming stay</h4>
+                    <p id="roomsSearchMeta">Select your dates above to see the exact room inventory for your stay window.</p>
+                </div>
+                <button type="button" class="btn btn-outline" id="refreshRoomsButton">Refresh Availability</button>
+            </div>
+
+            <div class="rooms-grid" id="roomsGrid"></div>
+            <div class="section-feedback" id="roomsSectionStatus" aria-live="polite"></div>
+
+            <div class="view-all">
+                <button type="button" class="btn btn-primary" data-scroll-target="gallery">View All Rooms</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="booking-modal" id="roomBookingModal" aria-hidden="true">
+        <div class="booking-modal-backdrop" data-booking-close></div>
+        <div class="booking-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="roomBookingTitle">
+            <button type="button" class="booking-modal-close" data-booking-close aria-label="Close booking form">&times;</button>
+            <div class="booking-modal-header">
+                <p class="booking-modal-eyebrow">Reserve Your Stay</p>
+                <h3 id="roomBookingTitle">Book Your Room</h3>
+                <p class="booking-modal-copy">Complete your details below and we will create your reservation request instantly.</p>
+            </div>
+
+            <div class="booking-room-summary">
+                <div>
+                    <p class="booking-room-label">Selected Room</p>
+                    <h4 id="bookingRoomName">Deluxe Room</h4>
+                    <p id="bookingRoomDescription">Spacious luxury with city views</p>
+                </div>
+                <div class="booking-room-price">
+                    <span>From</span>
+                    <strong id="bookingRoomPrice">Rs. 6,000</strong>
+                    <small>per night</small>
+                </div>
+            </div>
+
+            <form id="roomBookingForm" class="room-booking-form">
+                <input type="hidden" id="bookingRoomType" name="roomType">
+
+                <div class="booking-form-grid">
+                    <label class="booking-field">
+                        <span>Guest Name</span>
+                        <input type="text" id="bookingGuestName" name="guestName" required placeholder="Enter your full name">
+                    </label>
+
+                    <label class="booking-field">
+                        <span>Email Address</span>
+                        <input type="email" id="bookingGuestEmail" name="guestEmail" required placeholder="you@example.com">
+                    </label>
+
+                    <label class="booking-field">
+                        <span>Phone Number</span>
+                        <input type="tel" id="bookingGuestPhone" name="guestPhone" required placeholder="+91 98765 43210">
+                    </label>
+
+                    <label class="booking-field">
+                        <span>Check-in</span>
+                        <input type="date" id="bookingCheckInDate" name="checkInDate" required>
+                    </label>
+
+                    <label class="booking-field">
+                        <span>Check-out</span>
+                        <input type="date" id="bookingCheckOutDate" name="checkOutDate" required>
+                    </label>
+
+                    <label class="booking-field">
+                        <span>Guests</span>
+                        <select id="bookingNumberOfGuests" name="numberOfGuests" required>
+                            <option value="1">1 Guest</option>
+                            <option value="2" selected>2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                        </select>
+                    </label>
+
+                    <label class="booking-field">
+                        <span>Rooms</span>
+                        <select id="bookingNumberOfRooms" name="numberOfRooms" required>
+                            <option value="1" selected>1 Room</option>
+                            <option value="2">2 Rooms</option>
+                            <option value="3">3 Rooms</option>
+                            <option value="4">4 Rooms</option>
+                        </select>
+                    </label>
+
+                    <label class="booking-field booking-field-full">
+                        <span>Special Requests</span>
+                        <textarea id="bookingSpecialRequests" name="specialRequests" rows="4" placeholder="Any preferences, arrival notes, or special requests"></textarea>
+                    </label>
+                </div>
+
+                <div class="booking-modal-status" id="bookingModalStatus" aria-live="polite"></div>
+
+                <div class="booking-modal-actions">
+                    <button type="button" class="btn btn-tertiary booking-secondary-action" data-booking-close>Cancel</button>
+                    <button type="submit" class="btn btn-primary booking-primary-action" id="bookingSubmitButton">Confirm Booking</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="booking-modal" id="spaBookingModal" aria-hidden="true">
+        <div class="booking-modal-backdrop" data-spa-close></div>
+        <div class="booking-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="spaBookingTitle">
+            <button type="button" class="booking-modal-close" data-spa-close aria-label="Close spa booking form">&times;</button>
+            <div class="booking-modal-header">
+                <p class="booking-modal-eyebrow">Spa Reservation</p>
+                <h3 id="spaBookingTitle">Book a Wellness Experience</h3>
+                <p class="booking-modal-copy">Select your treatment, preferred time, and wellness details to reserve your spa appointment.</p>
+            </div>
+
+            <div class="booking-room-summary">
+                <div>
+                    <p class="booking-room-label">Selected Treatment</p>
+                    <h4 id="spaSelectedServiceName">Relaxation Massage</h4>
+                    <p id="spaSelectedServiceDescription">A calming full-body ritual to release tension and restore balance.</p>
+                </div>
+                <div class="booking-room-price">
+                    <span>Starting from</span>
+                    <strong id="spaSelectedServicePrice">Rs. 4,500</strong>
+                    <small id="spaSelectedServiceDuration">60 minutes</small>
+                </div>
+            </div>
+
+            <form id="spaBookingForm" class="room-booking-form">
+                <input type="hidden" id="spaServiceType" name="serviceType">
+                <input type="hidden" id="spaServiceId" name="serviceId">
+
+                <div class="booking-form-grid">
+                    <label class="booking-field">
+                        <span>Guest Name</span>
+                        <input type="text" id="spaGuestName" name="guestName" required placeholder="Enter your full name">
+                    </label>
+
+                    <label class="booking-field">
+                        <span>Email Address</span>
+                        <input type="email" id="spaGuestEmail" name="guestEmail" required placeholder="you@example.com">
+                    </label>
+
+                    <label class="booking-field">
+                        <span>Phone Number</span>
+                        <input type="tel" id="spaGuestPhone" name="guestPhone" required placeholder="+91 98765 43210">
+                    </label>
+
+                    <label class="booking-field">
+                        <span>Appointment Date</span>
+                        <input type="date" id="spaAppointmentDate" name="appointmentDate" required>
+                    </label>
+
+                    <label class="booking-field">
+                        <span>Appointment Time</span>
+                        <select id="spaAppointmentTime" name="appointmentTime" required></select>
+                    </label>
+
+                    <label class="booking-field">
+                        <span>Therapist Preference</span>
+                        <select id="spaTherapistPreference" name="therapistPreference">
+                            <option value="no-preference" selected>No Preference</option>
+                            <option value="female">Female Therapist</option>
+                            <option value="male">Male Therapist</option>
+                        </select>
+                    </label>
+
+                    <div class="booking-field booking-field-full">
+                        <span>Add-On Enhancements</span>
+                        <div id="spaAddOnOptions" class="addon-grid"></div>
+                    </div>
+
+                    <label class="booking-field booking-field-full">
+                        <span>Special Requests</span>
+                        <textarea id="spaSpecialRequests" name="specialRequests" rows="3" placeholder="Share preferences, focus areas, or celebration notes"></textarea>
+                    </label>
+
+                    <label class="booking-field">
+                        <span>Allergies</span>
+                        <textarea id="spaAllergies" name="allergies" rows="3" placeholder="Skincare or oil sensitivities"></textarea>
+                    </label>
+
+                    <label class="booking-field">
+                        <span>Medical Conditions</span>
+                        <textarea id="spaMedicalConditions" name="medicalConditions" rows="3" placeholder="Anything our therapists should know"></textarea>
+                    </label>
+                </div>
+
+                <div class="booking-modal-status" id="spaBookingStatus" aria-live="polite"></div>
+
+                <div class="booking-modal-actions">
+                    <button type="button" class="btn btn-tertiary booking-secondary-action" data-spa-close>Cancel</button>
+                    <button type="submit" class="btn btn-primary booking-primary-action" id="spaBookingSubmitButton">Confirm Spa Booking</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <section id="dining" class="dining">
+        <div class="container">
+            <div class="experience-header">
+                <div>
+                    <h3 class="section-subtitle">Dining</h3>
+                    <h2 class="section-title">In-Room Dining & Signature Plates</h2>
+                    <p class="experience-description">Order breakfast, late-night comfort dishes, desserts, and beverages directly to your room with live menu pricing and delivery timing.</p>
+                </div>
+                <div class="experience-actions">
+                    <button type="button" class="btn btn-primary" id="startFoodOrderButton">Order Room Service</button>
+                </div>
+            </div>
+
+            <div class="experience-meta">
+                <span class="experience-chip">24/7 room service</span>
+                <span class="experience-chip" id="foodDeliverySummary">Loading current delivery timing...</span>
+            </div>
+
+            <div class="experience-showcase">
+                <img
+                    src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                    data-image-key="facilities.dining"
+                    alt="Fine-dining restaurant setting representing GrandStay in-room dining and chef-led cuisine"
+                    loading="lazy"
+                >
+                <div class="experience-showcase-copy">
+                    <p class="inventory-eyebrow">Dining Experience</p>
+                    <h4>Chef-led cuisine, elevated presentation, and room service that feels five-star</h4>
+                    <p>From signature mains to desserts and beverages, the room-service menu is curated from our fine-dining kitchen and prepared for quick, polished delivery to your room.</p>
+                </div>
+            </div>
+
+            <div class="dining-grid" id="diningMenuGrid"></div>
+            <div class="section-feedback" id="foodSectionStatus" aria-live="polite"></div>
+        </div>
+    </section>
+
+    <div class="booking-modal" id="foodOrderModal" aria-hidden="true">
+        <div class="booking-modal-backdrop" data-food-close></div>
+        <div class="booking-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="foodOrderTitle">
+            <button type="button" class="booking-modal-close" data-food-close aria-label="Close room service order">&times;</button>
+            <div class="booking-modal-header">
+                <p class="booking-modal-eyebrow">Room Service</p>
+                <h3 id="foodOrderTitle">Place an In-Room Dining Order</h3>
+                <p class="booking-modal-copy">Choose your dishes, add your room details, and send your order directly to the kitchen.</p>
+            </div>
+
+            <div class="booking-room-summary">
+                <div>
+                    <p class="booking-room-label">Selected Menu</p>
+                    <h4>Curated In-Room Dining</h4>
+                    <p id="foodSelectedSummary">Select one or more dishes below and we will prepare them fresh for delivery.</p>
+                </div>
+                <div class="booking-room-price">
+                    <span>Average delivery</span>
+                    <strong id="foodEstimatedDelivery">35 minutes</strong>
+                    <small>service fee applies</small>
+                </div>
+            </div>
+
+            <form id="foodOrderForm" class="room-booking-form">
+                <div class="booking-form-grid">
+                    <label class="booking-field">
+                        <span>Guest Name</span>
+                        <input type="text" id="foodGuestName" name="guestName" required placeholder="Enter your full name">
+                    </label>
+
+                    <label class="booking-field">
+                        <span>Email Address</span>
+                        <input type="email" id="foodGuestEmail" name="guestEmail" required placeholder="you@example.com">
+                    </label>
+
+                    <label class="booking-field">
+                        <span>Phone Number</span>
+                        <input type="tel" id="foodGuestPhone" name="guestPhone" required placeholder="+91 98765 43210">
+                    </label>
+
+                    <label class="booking-field">
+                        <span>Room Number</span>
+                        <input type="text" id="foodRoomNumber" name="roomNumber" required placeholder="e.g. 1204">
+                    </label>
+
+                    <label class="booking-field">
+                        <span>Delivery Time</span>
+                        <select id="foodDeliveryTime" name="deliveryTime" required>
+                            <option value="asap" selected>As Soon As Possible</option>
+                            <option value="19:30">7:30 PM</option>
+                            <option value="20:00">8:00 PM</option>
+                            <option value="20:30">8:30 PM</option>
+                            <option value="21:00">9:00 PM</option>
+                        </select>
+                    </label>
+
+                    <div class="booking-field booking-field-full">
+                        <span>Menu Selection</span>
+                        <div id="foodOrderMenuOptions" class="food-order-grid"></div>
+                    </div>
+
+                    <label class="booking-field booking-field-full">
+                        <span>Notes</span>
+                        <textarea id="foodOrderNotes" name="notes" rows="4" placeholder="Add spice level, allergies, cutlery requests, or delivery instructions"></textarea>
+                    </label>
+                </div>
+
+                <div class="booking-modal-status" id="foodOrderStatus" aria-live="polite"></div>
+
+                <div class="booking-modal-actions">
+                    <button type="button" class="btn btn-tertiary booking-secondary-action" data-food-close>Cancel</button>
+                    <button type="submit" class="btn btn-primary booking-primary-action" id="foodOrderSubmitButton">Place Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h3 class="section-subtitle">Explore</h3>
+            <h2 class="section-title">Photo Gallery</h2>
+            <p class="gallery-description">Discover the beauty and elegance of GrandStay through our curated collection of photographs</p>
+            
+            <div class="gallery-grid">
+                <!-- Rooms -->
+                <div class="gallery-item large">
+                    <img
+                        src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        data-gallery-index="0"
+                        alt="Ornate gold-accent luxury bedroom"
+                        loading="lazy"
+                    >
+                    <div class="gallery-overlay" data-gallery-title-index="0">Room Gallery</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img
+                        src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        data-gallery-index="1"
+                        alt="Modern standard room with desk and city-view window"
+                        loading="lazy"
+                    >
+                    <div class="gallery-overlay" data-gallery-title-index="1">Standard Room</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img
+                        src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        data-gallery-index="2"
+                        alt="Warm deluxe bedroom with bench seating and soft lighting"
+                        loading="lazy"
+                    >
+                    <div class="gallery-overlay" data-gallery-title-index="2">Deluxe Room</div>
+                </div>
+
+                <!-- Facilities -->
+                <div class="gallery-item">
+                    <img
+                        src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        data-gallery-index="3"
+                        alt="Bright fitness center with treadmills and natural light"
+                        loading="lazy"
+                    >
+                    <div class="gallery-overlay" data-gallery-title-index="3">Fitness Center</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img
+                        src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        data-gallery-index="4"
+                        alt="Hot-stone massage close-up in a warm spa setting"
+                        loading="lazy"
+                    >
+                    <div class="gallery-overlay" data-gallery-title-index="4">Spa & Wellness</div>
+                </div>
+
+                <div class="gallery-item large">
+                    <img
+                        src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        data-gallery-index="5"
+                        alt="Chandelier-lit fine-dining restaurant with formal table settings"
+                        loading="lazy"
+                    >
+                    <div class="gallery-overlay" data-gallery-title-index="5">Fine Dining</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img
+                        src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        data-gallery-index="6"
+                        alt="Infinity pool overlooking the water at sunset"
+                        loading="lazy"
+                    >
+                    <div class="gallery-overlay" data-gallery-title-index="6">Infinity Pool</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img
+                        src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        data-gallery-index="7"
+                        alt="Palm-lined GrandStay hotel exterior at sunset"
+                        loading="lazy"
+                    >
+                    <div class="gallery-overlay" data-gallery-title-index="7">Hotel Exterior</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img
+                        src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        data-gallery-index="8"
+                        alt="Courtyard garden with fountain, palms, and sculpted hedges"
+                        loading="lazy"
+                    >
+                    <div class="gallery-overlay" data-gallery-title-index="8">Hotel Gardens</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img
+                        src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        data-gallery-index="9"
+                        alt="Rooftop lounge with skyline views at dusk"
+                        loading="lazy"
+                    >
+                    <div class="gallery-overlay" data-gallery-title-index="9">Rooftop Lounge</div>
+                </div>
+
+                <div class="gallery-item large">
+                    <img
+                        src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        data-gallery-index="10"
+                        alt="Double-height lobby with chandeliers and lounge seating"
+                        loading="lazy"
+                    >
+                    <div class="gallery-overlay" data-gallery-title-index="10">Lobby Area</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img
+                        src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        data-gallery-index="11"
+                        alt="Large luxury suite living room with chandelier and skyline view"
+                        loading="lazy"
+                    >
+                    <div class="gallery-overlay" data-gallery-title-index="11">Presidential Suite</div>
+                </div>
+            </div>
+
+            <div class="gallery-action">
+                <button class="btn btn-primary">View Full Gallery</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h3 class="section-subtitle">Testimonials</h3>
+            <h2 class="section-title">What Our Guests Say</h2>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"An absolutely magical experience. The rooms were immaculate, the staff incredibly attentive, and the spa treatment was the best I've ever had. Will definitely return!"</p>
+                    <div class="reviewer">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&q=85" alt="Priya Sharma" class="reviewer-avatar" loading="lazy">
+                        <div class="reviewer-info">
+                            <h4>Priya Sharma</h4>
+                            <p>Mumbai, India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"GrandStay exceeded every expectation. From the grand lobby to the rooftop pool, every detail screams luxury. The fine dining restaurant is a must-visit."</p>
+                    <div class="reviewer">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&q=85" alt="James Wilson" class="reviewer-avatar" loading="lazy">
+                        <div class="reviewer-info">
+                            <h4>James Wilson</h4>
+                            <p>London, UK</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Perfect for our anniversary celebration. The suite was breathtaking with its city views, and the bridal spa package left me feeling completely refreshed."</p>
+                    <div class="reviewer">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&q=85" alt="Ananya Reddy" class="reviewer-avatar" loading="lazy">
+                        <div class="reviewer-info">
+                            <h4>Ananya Reddy</h4>
+                            <p>Hyderabad, India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Outstanding service and beautiful property. The yoga sessions on the terrace at sunrise were the highlight of my stay. Highly recommended for wellness seekers."</p>
+                    <div class="reviewer">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&q=85" alt="Michael Chen" class="reviewer-avatar" loading="lazy">
+                        <div class="reviewer-info">
+                            <h4>Michael Chen</h4>
+                            <p>Singapore</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2 class="section-title">Ready for an Unforgettable Stay?</h2>
+            <p class="cta-text">Book your room today and experience the luxury, comfort, and world-class hospitality that GrandStay is renowned for.</p>
+            <div class="cta-buttons">
+                <button type="button" class="btn btn-primary" data-scroll-target="rooms">Book Your Stay</button>
+                <button type="button" class="btn btn-secondary" data-scroll-target="spa-services">Explore Spa</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>GrandStay</h4>
+                    <p>A five-star luxury hotel offering world-class hospitality, exquisite dining, rejuvenating spa treatments, and unforgettable experiences since 2004.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#rooms">Rooms & Suites</a></li>
+                        <li><a href="#spa-services">Spa & Wellness</a></li>
+                        <li><a href="#dining">Dining</a></li>
+                        <li><a href="/login">Member Login</a></li>
+                        <li><a href="/admin">Admin Portal</a></li>
+                        <li><a href="#contact">Contact Concierge</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Grand Avenue, Mumbai 400001</li>
+                        <li><i class="fas fa-phone"></i> +91 22 1234 5678</li>
+                        <li><i class="fas fa-envelope"></i> info@grandstay.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 GrandStay Hotel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/images-config.js"></script>
+    <script src="scripts/site-core.js"></script>
+    <script src="scripts/site-booking-spa.js"></script>
+    <script src="scripts/site-dining.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>

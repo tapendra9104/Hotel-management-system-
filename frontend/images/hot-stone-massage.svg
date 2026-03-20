@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Hot Stone Massage</title>
+  <desc id="desc">Placeholder image for the spa and wellness gallery image.</desc>
+  <defs>
+    <linearGradient id="massageBg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#8d4b2d"/>
+      <stop offset="100%" stop-color="#2a1917"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#massageBg)"/>
+  <rect x="140" y="500" width="1320" height="180" rx="24" fill="#d3b299"/>
+  <rect x="1050" y="430" width="260" height="90" rx="18" fill="#f2e8dd"/>
+  <ellipse cx="1120" cy="505" rx="64" ry="28" fill="#241818"/>
+  <ellipse cx="980" cy="495" rx="60" ry="26" fill="#241818"/>
+  <ellipse cx="860" cy="480" rx="58" ry="24" fill="#241818"/>
+  <circle cx="260" cy="300" r="28" fill="#f7c372"/>
+  <circle cx="340" cy="250" r="22" fill="#f7c372"/>
+</svg>

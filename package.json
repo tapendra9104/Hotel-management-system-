@@ -1,0 +1,13 @@
+{
+  "name": "grandstay-hotel",
+  "private": true,
+  "version": "1.0.0",
+  "description": "GrandStay Hotel full-stack project",
+  "scripts": {
+    "start": "npm --prefix backend start",
+    "dev": "npm --prefix backend run dev",
+    "backend:install": "npm --prefix backend install",
+    "test": "node tools/run-final-test.js",
+    "verify": "node tools/run-final-test.js"
+  }
+}

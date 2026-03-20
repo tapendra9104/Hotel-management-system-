@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Courtyard Garden</title>
+  <desc id="desc">Placeholder image for the fountain garden and palms.</desc>
+  <rect width="1600" height="900" fill="#b8d4ef"/>
+  <rect x="0" y="220" width="1600" height="680" fill="#7eb385"/>
+  <path d="M220 900c150-190 380-240 580-240s420 50 580 240" fill="#d8c4aa"/>
+  <path d="M330 900c120-120 300-155 470-155s350 35 470 155" fill="#b3c96b"/>
+  <circle cx="800" cy="560" r="95" fill="#86573f"/>
+  <circle cx="800" cy="560" r="64" fill="#96d7e8"/>
+  <rect x="788" y="450" width="24" height="78" fill="#86573f"/>
+  <circle cx="800" cy="430" r="18" fill="#96d7e8"/>
+  <circle cx="220" cy="260" r="48" fill="#2f6e42"/>
+  <circle cx="330" cy="320" r="62" fill="#2f6e42"/>
+  <circle cx="1380" cy="260" r="48" fill="#2f6e42"/>
+  <circle cx="1270" cy="320" r="62" fill="#2f6e42"/>
+</svg>
